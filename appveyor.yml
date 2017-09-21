@@ -3,12 +3,12 @@ image: Visual Studio 2017
 
 before_build:
   - cmd: dotnet --version
-  - cmd: dotnet restore ./Microsoft.Linq.Translations.sln --verbosity m
+  - cmd: dotnet restore ./LinqTranslator.sln --verbosity m
 
 build_script:
-  - cmd: dotnet publish ./Microsoft.Linq.Translations.sln
+  - cmd: dotnet publish ./LinqTranslator.sln
 
 artifacts:
-  - path: ./Microsoft.Linq.Translations/bin/Debug/netstandard1.0/publish
+  - path: ./LinqTranslator/bin/Debug/netstandard1.0/publish
     name: DotNetStandard1_0
     type: zip
